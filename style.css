@@ -1,0 +1,307 @@
+/*
+Css Reset
+*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+
+
+/*
+Colors
+  */
+:root {
+  --Green-lighter: hsl(148, 38%, 91%);
+  --Green-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-medium: hsl(186, 15%, 59%);
+  --Grey-darker: hsl(187, 24%, 22%);
+}
+
+font-face {
+  font-family: "Trickster";
+  src: url(assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+
+.main-container {
+  background-color: var(--Green-lighter);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Trickster", sans-serif;
+}
+
+.form-container {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 700px;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  /* margin: 90px 0; */
+}
+
+.full-name {
+  display: flex;
+  justify-content: space-between;
+
+  gap: 1rem;
+  color: var(--Grey-darker);
+}
+.name,
+.last-name{
+  width: 100%;
+
+}
+
+.input-style {
+  border-radius: 0.5rem;
+  border: 1px solid var(--Grey-medium);
+  outline: none;
+  padding: 0.7rem 0;
+  width: 100%;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  color: var(--Grey-darker);
+}
+
+.query-style{ /***********/
+  background-color: var(--Green-lighter);
+  border: 1px solid var(--Green-medium);
+}
+
+.general,
+.support{
+  display: flex;
+  gap: .8rem;
+  cursor: pointer;
+}
+
+.query-general[type="radio"], 
+.query-support[type="radio"] {
+  transform: scale(1.5); 
+  cursor: pointer;
+}
+
+.radio-icon-general,
+.radio-icon-support {
+  display: none;
+
+}
+
+/*
+warning text
+*/
+
+.warning-text {
+  color: var(--Red);
+  display: none;
+  margin-top: .3rem;
+}
+
+/*
+Asterisk
+*/
+
+.asterisk {
+  font-size: 1.5rem;
+  color: var(--Green-medium);
+}
+
+/*
+Query type
+*/
+
+.query-section {
+  display: flex;
+  gap: 1rem;
+  color: var(--Grey-darker);
+}
+
+.email-address label {
+  color: var(--Grey-darker);
+}
+
+.query-label {
+  color: var(--Grey-darker);
+}
+
+.textarea {
+  resize: none;
+  field-sizing: content;
+  height: 80px;
+}
+
+.consent{
+    color: var(--Grey-darker);
+
+}
+
+.message{
+  color:  var(--Grey-darker);
+}
+
+.submit-btn{
+    border: none;
+    padding: 1.2rem 0;
+    border-radius: .5rem;
+    background-color: var(--Green-medium);
+    color: var(--White);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.warning-style{
+    &&:hover{
+        border: 1px solid var(--Green-medium);
+        cursor: pointer;
+    }
+}
+
+.text-box{
+    margin-bottom: 2rem;
+}
+
+.consent-section{
+    margin-bottom: 1.5rem;
+}
+
+#consent[type="checkbox"]{
+transform: scale(1.2);
+}
+
+.consent-input{
+display: flex;
+gap: .5rem;
+}
+
+.checkbox-icon{
+  display: none;
+}
+
+
+
+/* succes state */
+.success-state {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+    max-width: 450px;
+    height: 110px;
+    padding: 1rem;
+    background-color: var(--Grey-darker);
+    border-radius: .7rem;
+  }
+
+  .message-sent{
+    display: flex;
+    gap: .5rem;
+  }
+  .success-state p{
+    width: 100%;
+    color: var(--Grey-medium);
+    text-align: center;
+  }
+  .message-sent p{
+    color: var(--White);
+    font-weight: 600;
+    text-align: left;
+
+  }
+
+ 
+
+
+
+
+
+/*
+Media query
+*/
+
+@media (width < 500px){
+  .main-container{
+    padding: 1.5rem 1rem;
+  }
+
+  .form-container{
+    padding: 1rem;
+  }
+  .full-name,
+  .query-section{
+    flex-wrap: wrap;
+  }
+
+  .textarea {
+    height: 250px;
+  }
+}
+

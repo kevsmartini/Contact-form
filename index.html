@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <section class="success-state">
+        <div class="message-sent">
+          <img src="assets/images/icon-success-check.svg" alt="" />
+          <p>Message Sent!</p>
+        </div>
+  
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </section>
+      <form action="" class="form-container">
+        <h1 class="title">Contact Us</h1>
+
+        <section class="full-name">
+          <div class="name">
+            <label for="name">First Name <sup class="asterisk">·</sup></label>
+            <input
+              id="name"
+              class="input-style warning-style name-input"
+              type="text"
+            />
+            <p class="warning-text" data-for="name">This field is required</p>
+          </div>
+
+          <div class="last-name">
+            <label for="last-name"
+              >Last Name<sup class="asterisk">·</sup></label
+            >
+            <input
+              id="last-name"
+              class="input-style warning-style"
+              type="text"
+            />
+            <p class="warning-text" data-for="last-name">
+              This field is required
+            </p>
+          </div>
+        </section>
+
+        <section class="email-address">
+          <label for="email">Email Address<sup class="asterisk">·</sup></label>
+          <input id="email" class="input-style warning-style" type="text" />
+          <p class="warning-text warning-text-email" data-for="email">
+            Please enter the a valid email address
+          </p>
+        </section>
+
+        <section class="query-type">
+          <div class="query-label">
+            <p>Query Type<sup class="asterisk">·</sup></p>
+          </div>
+          <div class="query-section">
+            <div class="general input-style">
+              <img
+                class="radio-icon-general"
+                src="assets/images/icon-radio-selected.svg"
+                alt=""
+              />
+              <input id="query" class="query-general" type="radio" />
+              <label for="general">General Enquiry</label>
+            </div>
+
+            <div class="support input-style">
+              <img
+                class="radio-icon-support"
+                src="assets/images/icon-radio-selected.svg"
+                alt=""
+              />
+              <input id="query" class="query-support" type="radio" />
+              <label for="support">Support Request</label>
+            </div>
+          </div>
+          <p class="warning-text-query warning-text">
+            Please select a query type
+          </p>
+        </section>
+
+        <section class="text-box">
+          <label class="message" for="text-box"
+            >Message<sup class="asterisk">·</sup></label
+          >
+          <textarea
+            id="message"
+            class="input-style textarea warning-style"
+          ></textarea>
+          <p class="warning-text" data-for="message">This field is required</p>
+        </section>
+
+        <section class="consent-section">
+          <div class="consent-input">
+            <img
+              class="checkbox-icon"
+              src="assets/images/icon-checkbox-check.svg"
+              alt=""
+            />
+            <input type="checkbox" id="consent"  />
+            <label class="consent" for="consent">
+              I consent to being contacted by the team
+            </label>
+          </div>
+
+          <p class="warning-text warning-text-consent">
+            To submit this form, please consent to being contacted
+          </p>
+        </section>
+
+        <input class="submit-btn" type="submit" />
+      </form>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
